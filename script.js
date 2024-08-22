@@ -33,6 +33,7 @@ const nav = document.querySelector(".nav"),
         }
         let target = ele.getAttribute("href").split("#")[1];
         document.querySelector("#" + target).classList.add("active")
+        asideSectionTogglerBtn()
        }
 
     function updateNav(ele){
@@ -55,6 +56,7 @@ const nav = document.querySelector(".nav"),
        navTogglerBtn.addEventListener( 'click' , () =>{
         asideSectionTogglerBtn();
        });
+
        function asideSectionTogglerBtn(){
         aside.classList.toggle("open");
         navTogglerBtn.classList.toggle("open");
@@ -62,3 +64,5 @@ const nav = document.querySelector(".nav"),
             allSection[i].classList.toggle("open");
         }
        }
+
+       
