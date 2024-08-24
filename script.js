@@ -49,6 +49,7 @@ const nav = document.querySelector(".nav"),
        document.querySelector(".hire-me").addEventListener("click",function(){
         showSection(this)
         updateNav(this)
+        asideSectionTogglerBtn();
        })
 
        const navTogglerBtn = document.querySelector(".nav-toggler"),
@@ -65,4 +66,68 @@ const nav = document.querySelector(".nav"),
         }
        }
 
-       
+
+       //project 
+       //place project to be displated on top in starting
+    /*
+       {
+        "title": "",
+        "tech" : "",
+        "play": "",
+        "description": "",
+        "image": "images/project/github.png",
+        "video": "https://www.youtube.com/embed/",
+        "github": ""
+    },
+    */
+       const projectsData = [
+        {
+            "title": "Tiny-Verse",
+            "tech" : "Unity-3d",
+            "play": "https://nayankamalverma.itch.io/tiny-verse",
+            "description": "➢ Made this for WTF x IGDC game jam 2024 and the theme was “Small World, Big Adventure”.<br>➢ Created dynamic 3D environment, enemy AI, aim and shoot system, audio system, animation and engaging game mechanics to improve gameplay.<br>➢ Utilized singleton pattern, oops, coroutine for implementation.",
+            "image": "images/project/TinyVerse.png",
+            "github": "https://github.com/nayankamalverma/Tinyverse/tree/build-v.1.0.1"
+        },
+        {
+            "title": "Skip-The Lights",
+            "tech" : "Unity-2d",
+            "play": "https://outscal.com/nayankamalverma/game/play-skip-the-lights-1-game",
+            "description": "➢ Made this for a game jam hosted by GameDev.tv and the theme was “Last stand”.<br>➢ Implemented enemy AI, aim and shoot system, high score save system, audio system and setup difficultycurve as per time passes.<br>➢ Also added animations, blood particle system with interactive UI",
+            "video": "https://www.youtube.com/embed/74bQSqWbbkY",
+            "github": "https://github.com/nayankamalverma/Skip---The-Lights"
+        }
+    ];
+    
+    const container = document.getElementById('project-container');
+    
+    projectsData.forEach((project, index) => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('project-card'); 
+            // Alternate layout based on index
+        if (index % 2 === 1) {
+           projectCard.classList.add('reverse');  
+        }
+
+        let mediaContent = '';
+        if (project.image) {
+            mediaContent = `<img src="${project.image}" alt="${project.title}" class="project-image">`
+        } else if (project.video) {
+            mediaContent = `<iframe width="100%" height="100%" src="${project.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="project-image"></iframe>`;
+        }
+        let playButton =''
+        if(project.play){
+            playButton = `<a href=${project.play} target="blank" class="btn play">Play</a>`
+        }
+
+        projectCard.innerHTML = `
+                    ${mediaContent}
+                    <div class="project-details">
+                        <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
+                        <p>${project.description}</p>
+                        <a href="${project.github}"  target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
+                    </div>
+                `;
+        container.appendChild(projectCard);
+    });
+    
