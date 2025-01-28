@@ -61,6 +61,7 @@ font-size: 14px;
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.3s ease;
+  min-width: 300px;
 }
 .section.back-section{
   z-index: 1;
@@ -150,9 +151,10 @@ font-size: 14px;
 /* //aside */
 
 .aside{
-  width: 270px;
-  background:  var(--bg-black-100);
   position: fixed;
+  z-index: 10; /* Lower than .modal */
+  width: 270px;
+  background: var(--bg-black-100);
   left: 0;
   top: 0;
   padding: 30px;
@@ -161,7 +163,6 @@ font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
   transition: all 0.3s ease;
 }
 
@@ -543,6 +544,8 @@ h3.my-proffesion{
 
  .projects-section {
   padding: 50px;
+  
+  min-width: 350px;
   text-align: center;
 }
 
@@ -593,6 +596,7 @@ h3.my-proffesion{
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  margin: auto;
 }
 
 .project-details h3 {
@@ -629,6 +633,40 @@ h3.my-proffesion{
 .project-details .btn{
   margin-left: 10px;
   padding: 9px 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  min-width: 350px;
+  z-index: 101; /* Higher than .aside */
+  top: 0;
+  left: 270px;
+  width: calc(100% - 270px);
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust background color */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  width: 80%;
+  z-index: 102; /* Ensure this is higher than .modal */
+  border: 1px solid #888;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Optional: Add a shadow for better visibility */
+  margin: 5% auto ;
+}
+
+.close{
+  color: #aaa;
+  float: right;
+  margin-right: 1%;
+  font-size: 28px;
+  font-weight: bold;
 }
 
  /* contact */
@@ -672,6 +710,9 @@ h3.my-proffesion{
   color: var(--text-black-700);
  }
 
+
+/* media queries */
+
  @media (max-width: 1199px){
   .section .container{
     padding-top: 70px;
@@ -699,6 +740,10 @@ h3.my-proffesion{
     display: block;
     margin-left: 0
   }
+  .modal{
+    left: 0;
+    width: 100%;
+  }
  }
 
  @media(max-width:991px){
@@ -719,7 +764,9 @@ h3.my-proffesion{
   .about .about-content .skills{
     margin-left: 10px;
   }
-
+  .modal {
+    left: 0;
+  }
  }
 
  @media (max-width: 767px){
@@ -760,8 +807,17 @@ h3.my-proffesion{
     width: 100%;
   }
   
-
+  .modal-content {
+    width: 90%;
+  }
  }
+
+ 
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+  }
+}
 
 .custom-icon{
   display: flex;
@@ -771,5 +827,3 @@ h3.my-proffesion{
   height: 50px;
   width: 45px;
 }
-
- 
