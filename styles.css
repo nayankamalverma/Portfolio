@@ -580,6 +580,10 @@ h3.my-proffesion{
   box-shadow: 10px 5px 5px var(--skin-color);
 }
 
+.project-card:hover{
+  cursor: pointer;
+}
+
 .project-image {
   width: 50%;
   object-fit: cover;
@@ -598,7 +602,6 @@ h3.my-proffesion{
   text-align: left;
   margin: auto;
 }
-
 .project-details h3 {
   font-size: 1.5em;
   color: var(--text-black-900);
