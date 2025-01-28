@@ -77,6 +77,7 @@ const nav = document.querySelector(".nav"),
         const modal = document.getElementById('project-modal');
         const modalBody = document.getElementById('modal-body');
         const span = document.getElementsByClassName('close')[0];
+        const navLinks = document.querySelectorAll('.nav a');
 
         // Clear modal content and hide modal on page load
         modalBody.innerHTML = '';
@@ -84,45 +85,44 @@ const nav = document.querySelector(".nav"),
 
         // Fetch the JSON data
     fetch('./projects.json')
-    .then(response => response.json())
-    .then(projectsData => {
-        projectsData.forEach((project, index) => {
-            const projectCard = document.createElement('div');
-            projectCard.classList.add('project-card'); 
-            // Alternate layout based on index
-            if (index % 2 === 1) {
-               projectCard.classList.add('reverse');  
-            }
+            .then(response => response.json())
+            .then(projectsData => {
+                projectsData.forEach((project, index) => {
+                    const projectCard = document.createElement('div');
+                    projectCard.classList.add('project-card'); 
+                    // Alternate layout based on index
+                    if (index % 2 === 1) {
+                       projectCard.classList.add('reverse');  
+                    }
 
-            let mediaContent = '';
-            if (project.image) {
-                mediaContent = `<img src="${project.image}" alt="${project.title}" class="project-image">`
-            } else if (project.video) {
-                mediaContent = `<iframe width="100%" height="100%" src="${project.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="project-image"></iframe>`;
-            }
-            let playButton = ''
-            if(project.play){
-                playButton = `<a href=${project.play} target="blank" class="btn play">Play</a>`
-            }
+                    let mediaContent = '';
+                    if (project.image) {
+                        mediaContent = `<img src="${project.image}" alt="${project.title}" class="project-image">`
+                    } else if (project.video) {
+                        mediaContent = `<iframe width="100%" height="100%" src="${project.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="project-image"></iframe>`;
+                    }
+                    let playButton = ''
+                    if(project.play){
+                        playButton = `<a href=${project.play} target="blank" class="btn play">Play</a>`
+                    }
 
-            projectCard.innerHTML = `
-                ${mediaContent}
-                <div class="project-details">
-                    <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
-                    <p>${project.description}</p>
-                    <a href="${project.github}"  target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
-                </div>
-            `;
-            container.appendChild(projectCard);
+                    projectCard.innerHTML = `
+                        ${mediaContent}
+                        <div class="project-details">
+                            <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
+                            <p>${project.description}</p>
+                            <a href="${project.github}"  target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
+                        </div>
+                    `;
+                    container.appendChild(projectCard);
 
-            projectCard.addEventListener('click', () => {
-                modalBody.innerHTML = projectCard.innerHTML;
-                modal.style.display = 'block';
-            });
-        });
-    })
-    .catch(error => console.error('Error fetching projects data:', error));
-
+                    projectCard.addEventListener('click', () => {
+                        modalBody.innerHTML = projectCard.innerHTML;
+                        modal.style.display = 'block';
+                    });
+                });
+            })
+            .catch(error => console.error('Error fetching projects data:', error));
 
         // Hide modal when the close button is clicked
         span.onclick = function() {
@@ -135,4 +135,11 @@ const nav = document.querySelector(".nav"),
                 modal.style.display = 'none';
             }
         }
+
+        // Hide modal when navigating to any other section
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        });
     });
