@@ -90,7 +90,7 @@ const nav = document.querySelector(".nav"),
     */
        const projectsData = [
         {
-            "id": 1,
+            "id": 0,
             "title": "Tiny-Verse",
             "tech" : "Unity-3d, C#",
             "play": "https://nayankamalverma.itch.io/tiny-verse",
@@ -100,7 +100,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/Tinyverse/tree/build-v.1.0.1"
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "Snake-2D",
             "tech" : "C++ and SFML",
             "play": "",
@@ -110,7 +110,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/Snake"
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "Endless-Waves",
             "tech" : "Unity-2d, C#",
             "play": "https://nayankamalverma.itch.io/endless-waves",
@@ -120,7 +120,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/Endless-Waves"
         },
         {
-            "id": 4,
+            "id": 3,
             "title": "Minesweeper",
             "tech" : "C++ and SFML",
             "play": "",
@@ -130,7 +130,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/Minesweeper"
         },
         {
-            "id": 5,
+            "id": 4,
             "title": "Skip-The Lights",
             "tech" : "Unity-2d, C#",
             "play": "https://outscal.com/nayankamalverma/game/play-skip-the-lights-1-game",
@@ -140,7 +140,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/Skip---The-Lights"
         },
         {
-            "id": 6,
+            "id": 5,
             "title": "The Explorer",
             "tech" : "Unity-2d, C#",
             "play": "https://outscal.com/nayankamalverma/game/play-the-explorer-game",
@@ -150,7 +150,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/2D-Platformer-Game"
         },
         {
-            "id": 7,
+            "id": 6,
             "title": "Duck Hunt",
             "tech" : "C++ and SFML",
             "play": "",
@@ -160,7 +160,7 @@ const nav = document.querySelector(".nav"),
             "github": "https://github.com/nayankamalverma/Duck-Hunt"
         },
         {
-            "id": 8,
+            "id": 7,
             "title": "Space Invaders",
             "tech" : "C++ and SFML",
             "play": "",
@@ -171,53 +171,67 @@ const nav = document.querySelector(".nav"),
         },
     ];
     
-    const container = document.getElementById('project-container');
-    const modal = document.getElementById('project-modal');
-    const modalBody = document.getElementById('modal-body');
-    const span = document.getElementsByClassName('close')[0];
-    
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('project-container');
+        const modal = document.getElementById('project-modal');
+        const modalBody = document.getElementById('modal-body');
+        const span = document.getElementsByClassName('close')[0];
 
-    projectsData.forEach((project, index) => {
-        const projectCard = document.createElement('div');
-        projectCard.classList.add('project-card'); 
+        // Clear modal content and hide modal on page load
+        modalBody.innerHTML = '';
+        modal.style.display = 'none';
+
+        projectsData.forEach((project, index) => {
+            const projectCard = document.createElement('div');
+            projectCard.classList.add('project-card'); 
             // Alternate layout based on index
-        if (index % 2 === 1) {
-           projectCard.classList.add('reverse');  
-        }
+            if (index % 2 === 1) {
+            projectCard.classList.add('reverse');  
+            }
 
-        let mediaContent = '';
-        if (project.image) {
-            mediaContent = `<img src="${project.image}" alt="${project.title}" class="project-image">`
-        } else if (project.video) {
-            mediaContent = `<iframe width="100%" height="100%" src="${project.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="project-image"></iframe>`;
-        }
-        let playButton =''
-        if(project.play){
-            playButton = `<a href=${project.play} target="blank" class="btn play">Play</a>`
-        }
+            let mediaContent = '';
+            if (project.image) {
+                mediaContent = `<img src="${project.image}" alt="${project.title}" class="project-image">`
+            } else if (project.video) {
+                mediaContent = `<iframe width="100%" height="100%" src="${project.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="project-image"></iframe>`;
+            }
+            let playButton = ''
+            if(project.play){
+                playButton = `<a href=${project.play} target="blank" class="btn play">Play</a>`
+            }
 
-        projectCard.innerHTML = `
+            projectCard.innerHTML = `
+                ${mediaContent}
+                <div class="project-details">
+                    <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
+                    <p>${project.description}</p>
+                    <a href="${project.github}"  target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
+                </div>
+            `;
+            container.appendChild(projectCard);
+
+            projectCard.addEventListener('click', () => {
+                modalBody.innerHTML = `
                     ${mediaContent}
                     <div class="project-details">
                         <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
                         <p>${project.description}</p>
+                        <p>${project.features}</p>
                         <a href="${project.github}"  target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
-                    </div>
-                `;
-        container.appendChild(projectCard);
-
-        projectCard.addEventListener('click', () => {
-            modalBody.innerHTML = projectCard.innerHTML;
-            modal.style.display = 'block';
+                    </div>`;
+                modal.style.display = 'block';
+            });
         });
+
+        // Hide modal when the close button is clicked
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        // Hide modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     });
-
-    span.onclick = function() {
-      modal.style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
-    }
