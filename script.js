@@ -117,7 +117,15 @@ const nav = document.querySelector(".nav"),
                     container.appendChild(projectCard);
 
                     projectCard.addEventListener('click', () => {
-                        modalBody.innerHTML = projectCard.innerHTML;
+                        modalBody.innerHTML =  `
+                        ${mediaContent}
+                        <div class="project-details">
+                            <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
+                            <p>${project.description}</p>
+                            <p>${project.features}</p>
+                            <a href="${project.github}" target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
+                        </div>
+                    `;
                         modal.style.display = 'block';
                     });
                 });
