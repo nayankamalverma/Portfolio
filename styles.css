@@ -637,6 +637,9 @@ h3.my-proffesion{
   margin-left: 10px;
   padding: 9px 20px;
 }
+.yt-vid{
+  height: 250px;
+}
 
 .modal {
   display: none;
@@ -769,6 +772,9 @@ h3.my-proffesion{
   }
   .modal {
     left: 0;
+  }
+  .yt-vid{
+    height: auto;margin: auto;
   }
  }
 
