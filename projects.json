@@ -1,32 +1,52 @@
 [
         {
-            "id": 8,
-            "title": "Tiny-Verse",
+            "id": 9,
+            "title": "Zombie Runner",
             "tech" : "Unity-3d, C#",
-            "play": "https://nayankamalverma.itch.io/tiny-verse",
-            "description": "➢ Made this for WTF x IGDC game jam 2024 and the theme was “Small World, Big Adventure”.<br>➢ Created dynamic 3D environment, enemy AI, aim and shoot system, audio system, animation and engaging game mechanics to improve gameplay.<br>➢ Utilized singleton pattern, oops, coroutine for implementation.",
-            "features": "gerg",
-            "image": "images/project/TinyVerse.png",
-            "github": "https://github.com/nayankamalverma/Tinyverse/tree/build-v.1.0.1"
+            "play": "",
+            "description": "A prototype for a 3D endless runner game with a modular and scalable code architecture.Simply import 3D models for characters, buildings, and obstacles to match your theme—everything else is ready to go!",
+            "features": "➢ Created a scalable, maintainable, and loosely coupled architecture to ensure flexibility for future feature additions and improvements.<br>➢ Used Service Locator to develop a centralized Game Manager that efficiently manages and decouples services for better code modularity.<br>➢ Implemented a generic object pool for building and obstacles to optimize performance and reduce memory overhead during gameplay.<br>➢ Used the Observer Pattern to facilitate real-time updates and event handling between different game systems, allowing for responsive game state changes without direct dependencies.",
+            "video": "https://www.youtube.com/embed/9S3vArwSOUg?si=JkN7pnoD8xhkCCN3",
+            "github": "https://github.com/nayankamalverma/Endless"
         },{
             "id": 8,
             "title": "Tiny-Verse",
             "tech" : "Unity-3d, C#",
             "play": "https://nayankamalverma.itch.io/tiny-verse",
-            "description": " Made this for WTF x IGDC game jam 2024 and the theme was “Small World, Big Adventure",
-            "features": "➢ Made this for WTF x IGDC game jam 2024 and the theme was “Small World, Big Adventure”.<br>➢ Created dynamic 3D environment, enemy AI, aim and shoot system, audio system, animation and engaging game mechanics to improve gameplay.<br>➢ Utilized singleton pattern, oops, coroutine for implementation.",
+            "description": "Tiny Verse is a 3D puzzle game set in a kids’ play area. Players must navigate through obstacles and enemies to find a key hidden in a maze, completing the level.",
+            "features": "➢  Made this for WTF x IGDC game jam 2024 and the theme was “Small World, Big Adventure”.<br>➢ Optimized code architecture for scalability and maintainability.<br>➢ Implemented a service Locator pattern with Dependency Injection to manage and decouple game services efficiently.<br>➢ Used the observer Pattern to enable seamless interaction between services, eliminating the need for direct references and enhancing modularity.<br>➢ Utilized the MVC architecture to design a scalable and modular player controller, ensuring a clean separation of concerns.<br>➢ Designed enemy AI using a State Machine for behaviour control and Nav-Mesh for pathfinding and navigation.",
             "image": "images/project/TinyVerse.png",
-            "github": "https://github.com/nayankamalverma/Tinyverse/tree/build-v.1.0.1"
+            "github": "https://github.com/nayankamalverma/Tinyverse/tree/main"
         },
         {
             "id": 7,
-            "title": "",
+            "title": "Chest-system",
             "tech" : "Unity-2D, C#",
             "play": "https://nayankamalverma.itch.io/chest-system",
-            "description": "➢Chest-System is an interactive system, combining chest management, dynamic currency handling, and engaging mechanics. It utilizes advanced design patterns for a scalable and maintainable architecture. <br>➢ Manage chest states like Locked, Unlocking, and Unlocked with a queue system and reward collection using Scriptable Objects and State Machines.<br>➢  Implements Service Locator, Dependency Injection, MVC, Observer Pattern, Object Pooling, and the State Machine for modular and efficient design.",
-            "features": "gerg",
+            "description": "A modular chest system designed with different architectural patterns! In this project, I leveraged various design patterns to create a clean, scalable, and maintainable codebase.",
+            "features": "➢Service Locator: For efficiently managing dependencies.<br>➢ MVC(Model-View-Controller): To ensure separation of concerns and a clean code structure.<br>➢ State Machine: To handle chest states like locked, unlocked, opening, and opened seamlessly.<br>➢ Observer Pattern: For event-driven communication, ensuring loose coupling between components.",
             "image": "images/project/Chest_System.png",
             "github": "https://github.com/nayankamalverma/Chest-System"
+        },
+        {
+            "id": 7,
+            "title": "Assassins-Shadow",
+            "tech" : "Unity-2D, C#",
+            "play": "https://outscal.com/nayankamalverma/game/play-assassins-shadow-game",
+            "description": "Assassins-Shadow is an action-packed stealth game, featuring dynamic enemy AI and immersive stealth mechanics. With advanced State Machines and modular architecture, it offers engaging and strategic gameplay.",
+            "features": "➢Dynamic Enemy AI: Enemies switch between states like Idle, Patrolling, Chasing, and Shooting, with unique behaviors for each enemy type, including One Punch Man, Clone Man, and Hitman.<br>➢ Stealth-Based Gameplay: Navigate levels strategically to avoid detection, eliminate enemies, and complete objectives.<br>➢ Advanced Architecture: Implements MVC, Service Locator, State Machines, and Scriptable Objects for a scalable and maintainable design.<br>➢ Customizable Levels: Easily configure levels, AI behaviors, and enemy types for endless gameplay possibilities.",
+            "video": "https://www.youtube.com/embed/cs7CtCCsfTg?si=8mjs8m9r-VDkXFtV",
+            "github": "https://github.com/nayankamalverma/Assassins-Shadow"
+        },
+        {
+            "id": 7,
+            "title": "Command Tactics",
+            "tech" : "Unity-2D, C#",
+            "play": "https://nayankamalverma.itch.io/chest-system",
+            "description": "Command Tactics is a turn-based battle game inspired by retro RPGs, utilizing the Command Pattern to manage gameplay actions, undo, and replay mechanics. It emphasizes strategic combat and extensible design.",
+            "features": "➢ Turn-Based Combat: Players execute actions like Attack, Heal, and Buff in a strategic, turn-based format.<br>➢ Command Pattern Integration: Encapsulates actions as objects, enabling robust Replay and Undo functionality for enhanced gameplay flexibility.<br> ➢ Extensible Unit Management: Customize units with unique stats and abilities using Scriptable Objects for scalable content.<br> ➢ Modular Architecture: Combines MVC, Service Locator, and Replay systems for a maintainable and scalable design framework.<br>",
+            "image": "images/project/Command_Tactics.png",
+            "github": "https://github.com/nayankamalverma/Command_Tactics"
         },
         {
             "id": 7,
@@ -35,7 +55,7 @@
             "play": "https://nayankamalverma.itch.io/chest-system",
             "description": "➢Angry Monkeys is a tower defense game, where players strategically place monkey towers to stop waves of challenging balloons.<br>➢ Strategically deploy monkeys like Sharp Eye, Ninja, and Sniper, each with unique abilities, using projectiles like Darts, Shuriken, and Bullets for tailored gameplay.<br>➢ Face Red, Blue, and Metal balloons, each with unique speed, damage, and rewards, across nine increasingly difficult waves.<br>➢ Implements Singleton, Service Locator, and Dependency Injection to create a decoupled and modular system for managing services.",
             "features": "gerg",
-            "image": "images/project/Chest_System.png",
+            "image": "images/project/Angry_Monkeys.png",
             "github": "https://github.com/nayankamalverma/Angry-Monkeys"
         },
         {
