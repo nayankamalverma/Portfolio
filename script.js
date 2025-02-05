@@ -118,10 +118,11 @@ const nav = document.querySelector(".nav"),
 
                     projectCard.addEventListener('click', () => {
                         modalBody.innerHTML =  `
-                        ${mediaContent}
+                        <div class="yt-vid">${mediaContent}</div>
                         <div class="project-details">
                             <h3><div class="title">${project.title} <div class="tech">(${project.tech})</div></div>  ${playButton} </h3>
                             <p>${project.description}</p>
+                            <div style="font-weight: 600 ;">Features:</div>
                             <p>${project.features}</p>
                             <a href="${project.github}" target="_blank"><i class="fa-brands fa-square-github fa-3x"></i></a>
                         </div>
