@@ -1,1 +1,1 @@
-# https://nayankamalverma.github.io/Portfolio/#home
+# https://nayankamalverma.github.io/Portfolio/
