@@ -15,8 +15,18 @@
             "play": "https://nayankamalverma.itch.io/tiny-verse",
             "description": "Tiny Verse is a 3D puzzle game set in a kids’ play area. Players must navigate through obstacles and enemies to find a key hidden in a maze, completing the level.",
             "features": "➢  Made this for WTF x IGDC game jam 2024 and the theme was “Small World, Big Adventure”.<br>➢ Optimized code architecture for scalability and maintainability.<br>➢ Implemented a service Locator pattern with Dependency Injection to manage and decouple game services efficiently.<br>➢ Used the observer Pattern to enable seamless interaction between services, eliminating the need for direct references and enhancing modularity.<br>➢ Utilized the MVC architecture to design a scalable and modular player controller, ensuring a clean separation of concerns.<br>➢ Designed enemy AI using a State Machine for behaviour control and Nav-Mesh for pathfinding and navigation.",
-            "image": "images/project/TinyVerse.png",
+            "video": "https://www.youtube.com/embed/4hG_YqAFFlY?si=1V_c9lZENCMa8m_p",
             "github": "https://github.com/nayankamalverma/Tinyverse/tree/main"
+        },
+        {
+            "id": 5,
+            "title": "Endless-Waves",
+            "tech" : "Unity-2d, C#",
+            "play": "https://nayankamalverma.itch.io/endless-waves",
+            "description": "Enter a world overrun by the undead Zombie, a fast-paced 2D top-down shooter where survival is the only goal. Armed with an arsenal of weapons, you must battle relentless waves of zombies.",
+            "features": "➢ Made this for a game jam hosted by GameDev.tv and the theme was “Last stand”.<br>➢ Implemented enemy AI, aim and shoot system, high score save system, audio system and setup difficultycurve as per time passes.<br>➢ Also added animations, blood particle system with interactive UI",
+            "video": "https://www.youtube.com/embed/Wz3O8B6LPkk?si=rbhDvi5GzLpxKI5_",
+            "github": "https://github.com/nayankamalverma/Endless-Waves"
         },
         {
             "id": 7,
@@ -25,7 +35,7 @@
             "play": "https://nayankamalverma.itch.io/chest-system",
             "description": "A modular chest system designed with different architectural patterns! In this project, I leveraged various design patterns to create a clean, scalable, and maintainable codebase.",
             "features": "➢Service Locator: For efficiently managing dependencies.<br>➢ MVC(Model-View-Controller): To ensure separation of concerns and a clean code structure.<br>➢ State Machine: To handle chest states like locked, unlocked, opening, and opened seamlessly.<br>➢ Observer Pattern: For event-driven communication, ensuring loose coupling between components.",
-            "image": "images/project/Chest_System.png",
+            "video": "https://www.youtube.com/embed/nPzKZqjjQXM?si=VGims-Q0AxbUb8WB",
             "github": "https://github.com/nayankamalverma/Chest-System"
         },
         {
@@ -42,10 +52,10 @@
             "id": 7,
             "title": "Command Tactics",
             "tech" : "Unity-2D, C#",
-            "play": "https://nayankamalverma.itch.io/chest-system",
+            "play": "https://outscal.com/nayankamalverma/game/play-command-tactics-6-game",
             "description": "Command Tactics is a turn-based battle game inspired by retro RPGs, utilizing the Command Pattern to manage gameplay actions, undo, and replay mechanics. It emphasizes strategic combat and extensible design.",
             "features": "➢ Turn-Based Combat: Players execute actions like Attack, Heal, and Buff in a strategic, turn-based format.<br>➢ Command Pattern Integration: Encapsulates actions as objects, enabling robust Replay and Undo functionality for enhanced gameplay flexibility.<br> ➢ Extensible Unit Management: Customize units with unique stats and abilities using Scriptable Objects for scalable content.<br> ➢ Modular Architecture: Combines MVC, Service Locator, and Replay systems for a maintainable and scalable design framework.<br>",
-            "image": "images/project/Command_Tactics.png",
+            "video": "https://www.youtube.com/embed/SGvrz42vrOY?si=0UTx5BO6FxWqOSOO",
             "github": "https://github.com/nayankamalverma/Command_Tactics"
         },
         {
@@ -55,7 +65,7 @@
             "play": "https://outscal.com/nayankamalverma/game/play-angry-monkeys-3-game",
             "description": "➢Angry Monkeys is a tower defense game, where players strategically place monkey towers to stop waves of challenging balloons.",
             "features": "➢ Strategically deploy monkeys like Sharp Eye, Ninja, and Sniper, each with unique abilities, using projectiles like Darts, Shuriken, and Bullets for tailored gameplay.<br>➢ Face Red, Blue, and Metal balloons, each with unique speed, damage, and rewards, across nine increasingly difficult waves.<br>➢ Implements Singleton, Service Locator, and Dependency Injection to create a decoupled and modular system for managing services.",
-            "image": "images/project/Angry_Monkeys.png",
+            "video": "https://www.youtube.com/embed/A4e11uTAZGY?si=zjK3RQLIvhvu-Q7B",
             "github": "https://github.com/nayankamalverma/Angry-Monkeys"
         },
         {
@@ -67,16 +77,6 @@
             "features": "➢Made from scratch in c++ and sfml. <br>➢ 4 unique levels with one boss level and added different boosters.<br>➢ Implemented the Service locator design pattern to manage game services, enhancing modularity and scalablity.<br>➢ Used MVC pattern for creating snake and levels.",
             "video": "https://www.youtube.com/embed/C0y3PQm6ilo",
             "github": "https://github.com/nayankamalverma/Snake"
-        },
-        {
-            "id": 5,
-            "title": "Endless-Waves",
-            "tech" : "Unity-2d, C#",
-            "play": "https://nayankamalverma.itch.io/endless-waves",
-            "description": "Enter a world overrun by the undead Zombie, a fast-paced 2D top-down shooter where survival is the only goal. Armed with an arsenal of weapons, you must battle relentless waves of zombies.",
-            "features": "➢ Made this for a game jam hosted by GameDev.tv and the theme was “Last stand”.<br>➢ Implemented enemy AI, aim and shoot system, high score save system, audio system and setup difficultycurve as per time passes.<br>➢ Also added animations, blood particle system with interactive UI",
-            "image": "images/project/endless-waves.png",
-            "github": "https://github.com/nayankamalverma/Endless-Waves"
         },
         {
             "id": 4,
