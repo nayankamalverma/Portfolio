@@ -1,3 +1,13 @@
+let myInfo ={
+    name: "Nayan Kamal Verma",
+    role: "Game Developer",
+    email: "nayankamalverma@gmail.com",
+    github: "https://github.com/nayankamalverma",
+    linkedin: "https://www.linkedin.com/in/nayan-verma-a4b9771b5/",
+    itchIo: "https://nayankamalverma.itch.io/",
+    resume : "https://drive.google.com/file/d/1QoG1XxWcPOE89RQayZjsuEIn-iMskfYd/view?usp=drivesdk"
+}
+
 var typed = new Typed(".typing",{
     strings:["Game Developer"],
     typeSpeed: 100,
@@ -46,12 +56,13 @@ const nav = document.querySelector(".nav"),
         }
     }
 
-       document.querySelector(".hire-me").addEventListener("click",function(){
-        showSection(this)
-        updateNav(this)
-        asideSectionTogglerBtn();
-       })
-
+    document.querySelectorAll(".hire-me").forEach(button => {
+        button.addEventListener("click", function() {
+            showSection(this);
+            updateNav(this);
+            asideSectionTogglerBtn();
+        });
+    });
        document.querySelector(".projects").addEventListener("click",function(){
         showSection(this)
         updateNav(this)
