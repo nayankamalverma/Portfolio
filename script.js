@@ -5,7 +5,7 @@ let myInfo ={
     github: "https://github.com/nayankamalverma",
     linkedin: "https://www.linkedin.com/in/nayan-verma-a4b9771b5/",
     itchIo: "https://nayankamalverma.itch.io/",
-    resume : "https://drive.google.com/file/d/1QoG1XxWcPOE89RQayZjsuEIn-iMskfYd/view?usp=drivesdk"
+    resume : "https://drive.google.com/file/d/12VyuwlTSQ4cd8fqiQ6aTuJomecoCt-aF/view?usp=sharing"
 }
 
 var typed = new Typed(".typing",{
