@@ -1,6 +1,6 @@
 [
         {
-            "id": 12,
+            "id": 13,
             "title": "Tiny-Verse",
             "tech" : "Unity-3d, C#",
             "play": "https://nayankamalverma.itch.io/tiny-verse",
@@ -10,7 +10,7 @@
             "github": "https://github.com/nayankamalverma/Tinyverse/tree/main"
         },
         {
-            "id": 11,
+            "id": 12,
             "title": "Endless-Waves",
             "tech" : "Unity-2d, C#",
             "play": "https://nayankamalverma.itch.io/endless-waves",
@@ -18,6 +18,16 @@
             "features": "➢ Made this for a game jam hosted by GameDev.tv and the theme was “Last stand”.<br>➢ Implemented enemy AI, aim and shoot system, high score save system, audio system and setup difficultycurve as per time passes.<br>➢ Also added animations, blood particle system with interactive UI",
             "video": "https://www.youtube.com/embed/-CQTLFOY0mA?si=xegKRfZEXz0ms24r",
             "github": "https://github.com/nayankamalverma/Endless-Waves"
+        },
+        {
+            "id": 11,
+            "title": "Store Manager",
+            "tech" : "Unity-3d, C#",
+            "play": "https://nayankamalverma.itch.io/store-manager",
+            "description": "Store Manager is a 3D simulation game where players manage a store, handling inventory, sales, and customer interactions. The goal is to maximize profits and create a thriving business.",
+            "features": "➢ A fast-paced, addictive hypercasual game with modular, scalable, and loosely coupled architecture.<br>➢ Upgrade your store by adding new items<br>➢ Upgrade system - you can upgrade your items and earn more money. <br>➢ Used the Service Locator, object pool, observer pattern to manage game services, dependencies and events efficently.",
+            "video": "https://www.youtube.com/embed/oI-BzPAhRNs?si=w-9j1b2jfRXIBWtV",
+            "github": "https://github.com/nayankamalverma/Store_Manager"
         },{
             "id": 10,
             "title": "Zombie Runner",
